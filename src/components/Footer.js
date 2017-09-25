@@ -22,10 +22,49 @@ class Footer extends React.Component {
             Contact
           </Link>
         </List>
+        <IconWrapper>
+          <a
+            href="https://github.com/klutes90"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Icon className="fa fa-github" aria-hidden="true" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/kylelutes"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Icon className="fa fa-linkedin-square" aria-hidden="true" />
+          </a>
+          <a
+            href="https://www.facebook.com/KyleLutesFreelance/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Icon className="fa fa-facebook" aria-hidden="true" />
+          </a>
+        </IconWrapper>
       </Wrapper>
     );
   }
 }
+
+const IconWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 30px;
+`;
+
+const Icon = styled.i`
+  color: #555;
+  margin-right: 15px;
+  transition: color 333ms ease-in-out;
+  &:hover {
+    color: #888;
+  }
+`;
 
 const Wrapper = styled.div`
   display: flex;

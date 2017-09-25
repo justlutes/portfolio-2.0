@@ -12,16 +12,58 @@ const Header = () => {
       <Title>Full Stack</Title>
       <Title>Developer</Title>
       <SubTitle>Design X Technology</SubTitle>
+      <IconWrapper>
+        <a
+          href="https://github.com/klutes90"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <Icon className="fa fa-github" aria-hidden="true" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/kylelutes"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <Icon className="fa fa-linkedin-square" aria-hidden="true" />
+        </a>
+        <a
+          href="https://www.facebook.com/KyleLutesFreelance/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <Icon className="fa fa-facebook" aria-hidden="true" />
+        </a>
+      </IconWrapper>
     </Wrapper>
   );
 };
+
+const IconWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 12rem;
+  margin-top: 1.5rem;
+  font-size: 30px;
+`;
+
+const Icon = styled.i`
+  color: #555;
+  margin-right: 15px;
+  transition: color 333ms ease-in-out;
+  &:hover {
+    color: #888;
+  }
+`;
 
 const Title = styled.p`
   font-weight: 900;
   color: #888;
   font-size: 100px;
   text-transform: uppercase;
-  padding-left: 100px;
+  padding-left: 12rem;
   margin: 0;
   line-height: 1;
 `;
@@ -43,7 +85,7 @@ const LogoWrapper = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   margin: 25px 0;
-  padding-left: 70px;
+  padding-left: 9rem;
 `;
 
 const Wrapper = styled.div`
