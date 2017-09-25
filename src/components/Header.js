@@ -23,7 +23,7 @@ const Title = styled.p`
   text-transform: uppercase;
   padding-left: 100px;
   margin: 0;
-  line-height: 1.0;
+  line-height: 1;
 `;
 
 const SubTitle = Title.extend`
@@ -39,11 +39,11 @@ const SubHeader = Title.extend`
 `;
 
 const LogoWrapper = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin: 25px 0;
-    padding-left: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 25px 0;
+  padding-left: 70px;
 `;
 
 const Wrapper = styled.div`
