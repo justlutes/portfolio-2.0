@@ -3,11 +3,11 @@ import styled from "styled-components";
 
 import SectionHeader from "./SectionHeader";
 
-class About extends React.Component {
+class Portfolio extends React.Component {
   render() {
     return (
       <Wrapper>
-        <SectionHeader number="1" top="About" bottom="Kyle Lutes" />
+        <SectionHeader number="2" top="The" bottom="Portfolio" />
       </Wrapper>
     );
   }
@@ -20,4 +20,4 @@ const Wrapper = styled.section`
   padding-top: calc(10rem + (15 - 10) * (100vw - 76.8rem)/ (110 - 76.8));
 `;
 
-export default About;
+export default Portfolio;
