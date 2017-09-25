@@ -1,0 +1,25 @@
+html, 
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  color: #888;
+  font-family: 'Work Sans', sans-serif;
+  line-height: 1.4;
+}
+
+::selection {
+      background: #1c1c1c;
+    color: #ccc;
+}
+
+:root {
+  background-color: #212121;
+  font-size: 62.5%;
+}
+
+h1 {
+  font-weight: 900;
+}
