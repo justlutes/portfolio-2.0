@@ -7,25 +7,33 @@ class Navigation extends React.Component {
       <Wrapper>
         <Item>
           <Button>
-            <Number active="true">00</Number>
+            <Number active={this.props.section === "welcome" ? true : false}>
+              00
+            </Number>
             <Name>Welcome</Name>
           </Button>
         </Item>
         <Item>
           <Button>
-            <Number>01</Number>
+            <Number active={this.props.section === "about" ? true : false}>
+              01
+            </Number>
             <Name>About</Name>
           </Button>
         </Item>
         <Item>
           <Button>
-            <Number>02</Number>
+            <Number active={this.props.section === "portfolio" ? true : false}>
+              02
+            </Number>
             <Name>Portfolio</Name>
           </Button>
         </Item>
         <Item>
           <Button>
-            <Number>03</Number>
+            <Number active={this.props.section === "contact" ? true : false}>
+              03
+            </Number>
             <Name>Contact</Name>
           </Button>
         </Item>
@@ -64,7 +72,7 @@ const Button = styled.button`
 `;
 
 const Number = styled.span`
-  color: ${props => (props.active ? "#888" : "#555")};
+  color: ${props => (props.active === true ? "#888" : "#555")};
   transtion: color 444ms;
   font-size: 1.4rem;
   height: 3rem;
@@ -73,7 +81,8 @@ const Number = styled.span`
   text-align: center;
   width: 3rem;
   &::after {
-    border-bottom: 0.4rem solid ${props => (props.active ? "#888" : "#444")};
+    border-bottom: 0.4rem solid
+      ${props => (props.active === true ? "#888" : "#444")};
     bottom: -0.1rem;
     content: "";
     left: 0;

@@ -1,41 +1,44 @@
 import React from "react";
 import styled from "styled-components";
+import Waypoint from "react-waypoint";
 import logo from "../assets/logo.png";
 
-const Header = () => {
+const Header = ({ currentSection }) => {
   return (
-    <Wrapper>
-      <LogoWrapper>
-        <img src={logo} alt="Logo" />
-      </LogoWrapper>
-      <SubHeader>Freelance</SubHeader>
-      <Title>Full Stack</Title>
-      <Title>Developer</Title>
-      <SubTitle>Design X Technology</SubTitle>
-      <IconWrapper>
-        <a
-          href="https://github.com/klutes90"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <Icon className="fa fa-github" aria-hidden="true" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/kylelutes"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <Icon className="fa fa-linkedin-square" aria-hidden="true" />
-        </a>
-        <a
-          href="https://www.facebook.com/KyleLutesFreelance/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <Icon className="fa fa-facebook" aria-hidden="true" />
-        </a>
-      </IconWrapper>
-    </Wrapper>
+    <Waypoint onEnter={() => currentSection("welcome")}>
+      <Wrapper>
+        <LogoWrapper>
+          <img src={logo} alt="Logo" />
+        </LogoWrapper>
+        <SubHeader>Freelance</SubHeader>
+        <Title>Full Stack</Title>
+        <Title>Developer</Title>
+        <SubTitle>Design X Technology</SubTitle>
+        <IconWrapper>
+          <a
+            href="https://github.com/klutes90"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Icon className="fa fa-github" aria-hidden="true" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/kylelutes"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Icon className="fa fa-linkedin-square" aria-hidden="true" />
+          </a>
+          <a
+            href="https://www.facebook.com/KyleLutesFreelance/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Icon className="fa fa-facebook" aria-hidden="true" />
+          </a>
+        </IconWrapper>
+      </Wrapper>
+    </Waypoint>
   );
 };
 

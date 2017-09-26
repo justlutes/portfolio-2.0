@@ -1,14 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import Waypoint from "react-waypoint";
 
 import SectionHeader from "./SectionHeader";
 
 class Portfolio extends React.Component {
   render() {
     return (
-      <Wrapper>
-        <SectionHeader number="2" top="The" bottom="Portfolio" />
-      </Wrapper>
+      <Waypoint onEnter={() => this.props.currentSection("portfolio")}>
+        <Wrapper>
+          <SectionHeader number="2" top="The" bottom="Portfolio" />
+        </Wrapper>
+      </Waypoint>
     );
   }
 }

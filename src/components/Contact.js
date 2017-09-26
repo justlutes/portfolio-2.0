@@ -1,14 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import Waypoint from "react-waypoint";
 
 import SectionHeader from "./SectionHeader";
 
 class Contact extends React.Component {
   render() {
     return (
-      <Wrapper>
-        <SectionHeader number="3" top="Contact" bottom="Me" />
-      </Wrapper>
+      <Waypoint onEnter={() => this.props.currentSection("contact")}>
+        <Wrapper>
+          <SectionHeader number="3" top="Contact" bottom="Me" />
+        </Wrapper>
+      </Waypoint>
     );
   }
 }
