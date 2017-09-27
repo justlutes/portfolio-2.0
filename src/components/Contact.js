@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Waypoint from "react-waypoint";
 import { Element } from "react-scroll";
 
 import SectionHeader from "./SectionHeader";
@@ -9,11 +8,9 @@ class Contact extends React.Component {
   render() {
     return (
       <Element name="contactSection">
-        <Waypoint onEnter={() => this.props.currentSection("contact")}>
-          <Wrapper>
-            <SectionHeader number="3" top="Contact" bottom="Me" />
-          </Wrapper>
-        </Waypoint>
+        <Wrapper>
+          <SectionHeader number="3" top="Contact" bottom="Me" />
+        </Wrapper>
       </Element>
     );
   }

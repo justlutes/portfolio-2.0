@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
 class Footer extends React.Component {
   scrollToLink = event => {
@@ -9,18 +10,18 @@ class Footer extends React.Component {
     return (
       <Wrapper>
         <List>
-          <Link name="welcome" onClick={this.scrollToLink}>
+          <FooterLink smooth={true} to="top" duration={500}>
             Welcome
-          </Link>
-          <Link name="about" onClick={this.scrollToLink}>
+          </FooterLink>
+          <FooterLink smooth={true} to="aboutSection" duration={500}>
             About
-          </Link>
-          <Link name="portfolio" onClick={this.scrollToLink}>
+          </FooterLink>
+          <FooterLink smooth={true} to="portfolioSection" duration={500}>
             Portfolio
-          </Link>
-          <Link name="contact" onClick={this.scrollToLink}>
+          </FooterLink>
+          <FooterLink smooth={true} to="contactSection" duration={500}>
             Contact
-          </Link>
+          </FooterLink>
         </List>
         <IconWrapper>
           <a
@@ -85,7 +86,7 @@ const List = styled.ul`
   width: 50%;
 `;
 
-const Link = styled.button`
+const FooterLink = styled(Link)`
   background: 0 0;
   border: 0;
   cursor: pointer;

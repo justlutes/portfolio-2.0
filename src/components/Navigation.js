@@ -1,44 +1,79 @@
 import React from "react";
 import styled from "styled-components";
-import { animateScroll, scroller } from "react-scroll";
+import { Link, scroller } from "react-scroll";
 
 class Navigation extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      section: "welcome"
+    };
+  }
+
   scrollToElement = element => {
     scroller.scrollTo(element, {
       duration: 500,
       smooth: true
     });
   };
+  handleActive = section => {
+    this.setState({ section });
+  };
   render() {
     return (
       <Wrapper>
         <Item>
-          <Button onClick={() => animateScroll.scrollToTop()}>
-            <Number active={this.props.section === "welcome" ? true : false}>
+          <Button
+            spy={true}
+            smooth={true}
+            to="top"
+            duration={500}
+            onSetActive={() => this.handleActive("welcome")}
+          >
+            <Number active={this.state.section === "welcome" ? true : false}>
               00
             </Number>
             <Name>Welcome</Name>
           </Button>
         </Item>
         <Item>
-          <Button onClick={() => this.scrollToElement("aboutSection")}>
-            <Number active={this.props.section === "about" ? true : false}>
+          <Button
+            spy={true}
+            smooth={true}
+            to="aboutSection"
+            duration={500}
+            onSetActive={() => this.handleActive("about")}
+          >
+            <Number active={this.state.section === "about" ? true : false}>
               01
             </Number>
             <Name>About</Name>
           </Button>
         </Item>
         <Item>
-          <Button onClick={() => this.scrollToElement("portfolioSection")}>
-            <Number active={this.props.section === "portfolio" ? true : false}>
+          <Button
+            spy={true}
+            smooth={true}
+            to="portfolioSection"
+            duration={500}
+            onSetActive={() => this.handleActive("portfolio")}
+          >
+            <Number active={this.state.section === "portfolio" ? true : false}>
               02
             </Number>
             <Name>Portfolio</Name>
           </Button>
         </Item>
         <Item>
-          <Button onClick={() => this.scrollToElement("contactSection")}>
-            <Number active={this.props.section === "contact" ? true : false}>
+          <Button
+            spy={true}
+            smooth={true}
+            to="contactSection"
+            duration={500}
+            onSetActive={() => this.handleActive("contact")}
+          >
+            <Number active={this.state.section === "contact" ? true : false}>
               03
             </Number>
             <Name>Contact</Name>
@@ -60,7 +95,7 @@ const Wrapper = styled.ul`
 
 const Item = styled.li`transform: matrix(1, 0, 0, 1, 0, 0);`;
 
-const Button = styled.button`
+const Button = styled(Link)`
   display: flex;
   flex-direction: row;
   padding: 0.5rem;

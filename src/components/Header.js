@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Waypoint from "react-waypoint";
+import { Element } from "react-scroll";
 import logo from "../assets/logo.png";
 
 const Header = ({ currentSection }) => {
   return (
-    <Waypoint onEnter={() => currentSection("welcome")}>
+    <Element name="top">
       <Wrapper>
         <LogoWrapper>
           <img src={logo} alt="Logo" />
@@ -38,7 +38,7 @@ const Header = ({ currentSection }) => {
           </a>
         </IconWrapper>
       </Wrapper>
-    </Waypoint>
+    </Element>
   );
 };
 
