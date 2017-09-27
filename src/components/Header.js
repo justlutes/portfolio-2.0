@@ -91,11 +91,11 @@ const LogoWrapper = styled.div`
   padding-left: 9rem;
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  height: 101vh;
   width: 100%;
 `;
 

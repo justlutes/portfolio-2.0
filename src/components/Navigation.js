@@ -1,12 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import { animateScroll, scroller } from "react-scroll";
 
 class Navigation extends React.Component {
+  scrollToElement = element => {
+    scroller.scrollTo(element, {
+      duration: 500,
+      smooth: true
+    });
+  };
   render() {
     return (
       <Wrapper>
         <Item>
-          <Button>
+          <Button onClick={() => animateScroll.scrollToTop()}>
             <Number active={this.props.section === "welcome" ? true : false}>
               00
             </Number>
@@ -14,7 +21,7 @@ class Navigation extends React.Component {
           </Button>
         </Item>
         <Item>
-          <Button>
+          <Button onClick={() => this.scrollToElement("aboutSection")}>
             <Number active={this.props.section === "about" ? true : false}>
               01
             </Number>
@@ -22,7 +29,7 @@ class Navigation extends React.Component {
           </Button>
         </Item>
         <Item>
-          <Button>
+          <Button onClick={() => this.scrollToElement("portfolioSection")}>
             <Number active={this.props.section === "portfolio" ? true : false}>
               02
             </Number>
@@ -30,7 +37,7 @@ class Navigation extends React.Component {
           </Button>
         </Item>
         <Item>
-          <Button>
+          <Button onClick={() => this.scrollToElement("contactSection")}>
             <Number active={this.props.section === "contact" ? true : false}>
               03
             </Number>
