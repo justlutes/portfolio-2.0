@@ -3,9 +3,6 @@ import styled from "styled-components";
 import { Link } from "react-scroll";
 
 class Footer extends React.Component {
-  scrollToLink = event => {
-    console.log(event.target.name);
-  };
   render() {
     return (
       <Wrapper>
