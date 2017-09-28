@@ -8,16 +8,14 @@ import Contact from "./components/Contact";
 
 class App extends React.Component {
   render() {
-    return (
-      <div>
-        <Header />
-        <Navigation />
-        <About />
-        <Portfolio />
-        <Contact />
-        <Footer />
-      </div>
-    );
+    return [
+      <Header key={"header"} />,
+      <Navigation key={"nav"} />,
+      <About key={"about"} />,
+      <Portfolio key={"port"} />,
+      <Contact key={"contact"} />,
+      <Footer key={"footer"} />
+    ];
   }
 }
 
