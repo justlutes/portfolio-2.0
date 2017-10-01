@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { Element } from "react-scroll";
 
-import SectionHeader from "./SectionHeader";
+import SectionHeader from "../molecules/SectionHeader";
 
-class Contact extends React.Component {
+class About extends React.Component {
   render() {
     return (
-      <Element name="contactSection">
+      <Element name="about">
         <Wrapper>
-          <SectionHeader number="3" top="Contact" bottom="Me" />
+          <SectionHeader number="1" top="About" bottom="Kyle Lutes" />
         </Wrapper>
       </Element>
     );
@@ -23,4 +23,4 @@ const Wrapper = styled.section`
   padding-top: calc(10rem + (15 - 10) * (100vw - 76.8rem)/ (110 - 76.8));
 `;
 
-export default Contact;
+export default About;

@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { Element } from "react-scroll";
+
+import SocialIcon from "../molecules/SocialIcon";
 import logo from "../assets/logo.png";
 
 const Header = ({ currentSection }) => {
   return (
-    <Element name="top">
+    <Element name="welcome">
       <Wrapper>
         <LogoWrapper>
           <img src={logo} alt="Logo" />
@@ -15,27 +17,15 @@ const Header = ({ currentSection }) => {
         <Title>Developer</Title>
         <SubTitle>Design X Technology</SubTitle>
         <IconWrapper>
-          <a
-            href="https://github.com/klutes90"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <Icon className="fa fa-github" aria-hidden="true" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/kylelutes"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <Icon className="fa fa-linkedin-square" aria-hidden="true" />
-          </a>
-          <a
-            href="https://www.facebook.com/KyleLutesFreelance/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <Icon className="fa fa-facebook" aria-hidden="true" />
-          </a>
+          <SocialIcon anchor="https://github.com/klutes90" icon="github" />
+          <SocialIcon
+            anchor="https://www.linkedin.com/in/kylelutes"
+            icon="linkedin-square"
+          />
+          <SocialIcon
+            anchor="https://www.facebook.com/KyleLutesFreelance/"
+            icon="facebook"
+          />
         </IconWrapper>
       </Wrapper>
     </Element>
@@ -50,15 +40,6 @@ const IconWrapper = styled.div`
   padding-left: 12rem;
   margin-top: 1.5rem;
   font-size: 30px;
-`;
-
-const Icon = styled.i`
-  color: #555;
-  margin-right: 15px;
-  transition: color 333ms ease-in-out;
-  &:hover {
-    color: #888;
-  }
 `;
 
 const Title = styled.p`
