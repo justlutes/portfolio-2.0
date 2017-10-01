@@ -53,6 +53,7 @@ const List = styled.ul`
   align-items: center;
   list-style: none;
   width: 50%;
+  padding: 0;
 `;
 
 export default Footer;

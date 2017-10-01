@@ -57,12 +57,15 @@ class Navigation extends React.Component {
 }
 
 const Wrapper = styled.ul`
+display: none;
+@media all and (min-width: 50em) {
   display: block;
   position: fixed;
   top: 50vh;
   right: 0;
   list-style: none;
   transform: translateY(-50%);
+}
 `;
 
 export default Navigation;

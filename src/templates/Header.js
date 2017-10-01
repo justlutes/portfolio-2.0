@@ -37,19 +37,25 @@ const IconWrapper = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 12rem;
+  padding-left: 4.5rem;
   margin-top: 1.5rem;
   font-size: 30px;
+  @media all and (min-width: 50em) {
+    padding-left: 12rem;
+  }
 `;
 
 const Title = styled.p`
   font-weight: 900;
   color: #888;
-  font-size: 100px;
+  font-size: 12rem;
   text-transform: uppercase;
-  padding-left: 12rem;
+  padding-left: 4.5rem;
   margin: 0;
   line-height: 1;
+  @media all and (min-width: 50em) {
+    padding-left: 12rem;
+  }
 `;
 
 const SubTitle = Title.extend`
@@ -68,8 +74,12 @@ const LogoWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin: 25px 0;
-  padding-left: 9rem;
+  margin: 15px 0;
+  padding-left: 1rem;
+  @media all and (min-width: 50em) {
+    margin: 25px 0;
+    padding-left: 9rem;
+  }
 `;
 
 const Wrapper = styled.section`
