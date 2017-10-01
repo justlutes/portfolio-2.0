@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "./components/Header";
-import Navigation from "./components/Navigation";
-import Footer from "./components/Footer";
-import About from "./components/About";
-import Portfolio from "./components/Portfolio";
-import Contact from "./components/Contact";
+import Header from "./templates/Header";
+import About from "./templates/About";
+import Portfolio from "./templates/Portfolio";
+import Contact from "./templates/Contact";
+import Navigation from "./organisms/Navigation";
+import Footer from "./organisms/Footer";
 
 class App extends React.Component {
   render() {
