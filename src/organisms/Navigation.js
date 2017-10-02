@@ -3,13 +3,15 @@ import styled from "styled-components";
 import { scroller } from "react-scroll";
 
 import NavButton from "../atoms/NavButton";
+import ScrollToTop from "../atoms/ScrollToTop";
 
 class Navigation extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      section: "welcome"
+      section: "welcome",
+      showScrollTop: false
     };
   }
 
@@ -21,16 +23,25 @@ class Navigation extends React.Component {
   };
 
   handleActive = section => {
+    if (section === "welcome") {
+      this.setState({ section, showScrollTop: false });
+    }
     this.setState({ section });
   };
 
+  handleInactive = () => {
+    this.setState({ showScrollTop: true });
+  };
+
   render() {
-    return (
-      <Wrapper>
+    return [
+      <ScrollToTop key="scroll" visible={this.state.showScrollTop} />,
+      <Wrapper key="navigation">
         <NavButton
           anchor="welcome"
           number="00"
           handleActive={this.handleActive}
+          handleInactive={this.handleInactive}
           section={this.state.section}
         />
         <NavButton
@@ -52,20 +63,20 @@ class Navigation extends React.Component {
           section={this.state.section}
         />
       </Wrapper>
-    );
+    ];
   }
 }
 
 const Wrapper = styled.ul`
-display: none;
-@media all and (min-width: 50em) {
-  display: block;
-  position: fixed;
-  top: 50vh;
-  right: 0;
-  list-style: none;
-  transform: translateY(-50%);
-}
+  display: none;
+  @media all and (min-width: 50em) {
+    display: block;
+    position: fixed;
+    top: 50vh;
+    right: 0;
+    list-style: none;
+    transform: translateY(-50%);
+  }
 `;
 
 export default Navigation;

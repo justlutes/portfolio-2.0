@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Element } from "react-scroll";
 
 import SocialIcon from "../molecules/SocialIcon";
+
 import logo from "../assets/logo.png";
 
 const Header = ({ currentSection }) => {

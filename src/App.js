@@ -9,12 +9,12 @@ import Footer from "./organisms/Footer";
 class App extends React.Component {
   render() {
     return [
-      <Header key={"header"} />,
-      <Navigation key={"nav"} />,
-      <About key={"about"} />,
-      <Portfolio key={"port"} />,
-      <Contact key={"contact"} />,
-      <Footer key={"footer"} />
+      <Header key="header" />,
+      <Navigation key="nav" />,
+      <About key="about" />,
+      <Portfolio key="port" />,
+      <Contact key="contact" />,
+      <Footer key="footer" />
     ];
   }
 }

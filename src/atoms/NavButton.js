@@ -2,7 +2,30 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 
-const NavButton = ({ anchor, number, handleActive, section }) => {
+const NavButton = ({
+  anchor,
+  number,
+  handleActive,
+  handleInactive,
+  section
+}) => {
+  if (anchor === "welcome") {
+    return (
+      <Item>
+        <Button
+          spy={true}
+          smooth={true}
+          to={anchor}
+          duration={500}
+          onSetActive={() => handleActive(anchor)}
+          onSetInactive={() => handleInactive()}
+        >
+          <Number active={section === anchor ? true : false}>{number}</Number>
+          <Name>{anchor}</Name>
+        </Button>
+      </Item>
+    );
+  }
   return (
     <Item>
       <Button
@@ -12,9 +35,7 @@ const NavButton = ({ anchor, number, handleActive, section }) => {
         duration={500}
         onSetActive={() => handleActive(anchor)}
       >
-        <Number active={section === anchor ? true : false}>
-          {number}
-        </Number>
+        <Number active={section === anchor ? true : false}>{number}</Number>
         <Name>{anchor}</Name>
       </Button>
     </Item>
