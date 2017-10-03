@@ -9,7 +9,9 @@ const InnerSection = ({ author, quote, contents }) => {
           <Bold>{quote}</Bold>
           <Author>- {author}</Author>
         </Paragraph>
-        {contents.map(content => <Paragraph>{content}</Paragraph>)}
+        {contents.map(content => (
+          <Paragraph key={content}>{content}</Paragraph>
+        ))}
       </LeftColumn>
     </Container>
   );
@@ -27,9 +29,10 @@ const Container = styled.div`
 
 const LeftColumn = styled.div`
   order: 2;
-  width: 45%;
+  width: 100%;
   @media all and (min-width: 50em) {
     order: 1;
+    width: 45%;
   }
 `;
 
