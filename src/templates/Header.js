@@ -18,14 +18,30 @@ const Header = ({ currentSection }) => {
         <Title>Developer</Title>
         <SubTitle>Design X Technology</SubTitle>
         <IconWrapper>
-          <SocialIcon anchor="https://github.com/klutes90" icon="github" />
+          <SocialIcon
+            anchor="https://github.com/klutes90"
+            icon="github"
+            aria="Check My Github"
+          />
           <SocialIcon
             anchor="https://www.linkedin.com/in/kylelutes"
-            icon="linkedin-square"
+            icon="linkedin"
+            aria="Add Me On LinkedIn"
           />
           <SocialIcon
             anchor="https://www.facebook.com/KyleLutesFreelance/"
             icon="facebook"
+            aria="Add Me On Facebook"
+          />
+          <SocialIcon
+            anchor="https://twitter.com/KyleLutes2"
+            icon="twitter"
+            aria="Follow Me On Twitter"
+          />
+          <SocialIcon
+            anchor="mailto:kyle@kyle-lutes.com"
+            icon="paper-plane"
+            aria="Email Me"
           />
         </IconWrapper>
       </Wrapper>
@@ -40,9 +56,10 @@ const IconWrapper = styled.div`
   align-items: center;
   padding-left: 4.5rem;
   margin-top: 1.5rem;
-  font-size: 30px;
+  font-size: 20px;
   @media all and (min-width: 50em) {
     padding-left: 12rem;
+    font-size: 30px;
   }
 `;
 
@@ -51,7 +68,7 @@ const Title = styled.p`
   color: #888;
   font-size: 12rem;
   text-transform: uppercase;
-  padding-left: 4.5rem;
+  padding-left: 3.5rem;
   margin: 0;
   line-height: 1;
   @media all and (min-width: 50em) {
@@ -76,7 +93,7 @@ const LogoWrapper = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   margin: 15px 0;
-  padding-left: 1rem;
+  padding-left: 0;
   @media all and (min-width: 50em) {
     margin: 25px 0;
     padding-left: 9rem;
