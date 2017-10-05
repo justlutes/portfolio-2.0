@@ -15,8 +15,9 @@ const Container = styled.button`
   position: fixed;
   top: 0;
   left: 0;
-  width: 65px;
+  width: 100%;
   height: 65px;
+  z-index: 1;
   display: ${props => (props.active === true ? "flex" : "none")};
   align-items: center;
   justify-content: center;
@@ -26,6 +27,9 @@ const Container = styled.button`
   background-color: #000;
   border: none;
   border-radius: 0 0 4px 0;
+  @media all and (min-width: 50em) {
+    width: 65px;
+  }
 `;
 
 const Img = styled.img`
