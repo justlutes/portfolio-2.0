@@ -6,11 +6,12 @@ const SectionTagLine = ({ text }) => {
 };
 
 const Wrapper = styled.div`
-    font-size: calc(2rem + (3 - 2) * (100vw - 32rem)/ (76.8 - 32));
-    font-weight: 600;
-    line-height: 1.3;
-    text-align: right;
-    margin-top: calc(4rem + (6 - 4) * (100vw - 32rem)/ (76.8 - 32));
+  font-size: calc(2rem + (3 - 2) * (100vw - 32rem)/ (76.8 - 32));
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: right;
+  margin-top: calc(4rem + (6 - 4) * (100vw - 32rem)/ (76.8 - 32));
+  margin-left: 15%;
 `;
 
 export default SectionTagLine;

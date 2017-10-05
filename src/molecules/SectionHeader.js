@@ -72,7 +72,7 @@ const NumberPart = styled.span`
 
 const NumberLine = styled.span`
   transform: matrix(1, 0, 0, 1, 0, 0);
-  height: calc(.5rem + (1 - .5) * (100vw - 32rem)/ (76.8 - 32));;
+  height: calc(0.5rem + (1 - 0.5) * (100vw - 32rem)/ (76.8 - 32));
   background-color: #444;
   display: inline-block;
 `;
