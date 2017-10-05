@@ -18,7 +18,7 @@ const Container = styled.button`
   width: 100%;
   height: 65px;
   z-index: 1;
-  display: ${props => (props.active === true ? "flex" : "none")};
+  display: flex;
   align-items: center;
   justify-content: center;
   outline: 0;
@@ -27,6 +27,9 @@ const Container = styled.button`
   background-color: #000;
   border: none;
   border-radius: 0 0 4px 0;
+  transform: ${props =>
+    props.active === true ? "translateX(0)" : "translateX(-100%)"};
+  transition: transform 666ms ease-in-out;
   @media all and (min-width: 50em) {
     width: 65px;
   }

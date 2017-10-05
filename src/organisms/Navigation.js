@@ -11,9 +11,26 @@ class Navigation extends React.Component {
 
     this.state = {
       section: "welcome",
+      scrollY: 0,
+      currentScrollY: 0,
       showScrollTop: false
     };
   }
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  handleScroll = () => {
+    const { scrollY } = this.state;
+    scrollY > window.scrollY
+      ? this.setState({ showScrollTop: false, scrollY: window.scrollY })
+      : this.setState({ showScrollTop: true, scrollY: window.scrollY });
+  };
 
   scrollToElement = element => {
     scroller.scrollTo(element, {
@@ -23,14 +40,7 @@ class Navigation extends React.Component {
   };
 
   handleActive = section => {
-    if (section === "welcome") {
-      this.setState({ section, showScrollTop: false });
-    }
     this.setState({ section });
-  };
-
-  handleInactive = () => {
-    this.setState({ showScrollTop: true });
   };
 
   render() {
@@ -41,7 +51,6 @@ class Navigation extends React.Component {
           anchor="welcome"
           number="00"
           handleActive={this.handleActive}
-          handleInactive={this.handleInactive}
           section={this.state.section}
         />
         <NavButton
