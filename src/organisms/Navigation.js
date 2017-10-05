@@ -66,8 +66,14 @@ class Navigation extends React.Component {
           section={this.state.section}
         />
         <NavButton
-          anchor="contact"
+          anchor="blog"
           number="03"
+          handleActive={this.handleActive}
+          section={this.state.section}
+        />
+        <NavButton
+          anchor="contact"
+          number="04"
           handleActive={this.handleActive}
           section={this.state.section}
         />
