@@ -28,8 +28,8 @@ class Navigation extends React.Component {
   handleScroll = () => {
     const { scrollY } = this.state;
     scrollY > window.scrollY
-      ? this.setState({ showScrollTop: false, scrollY: window.scrollY })
-      : this.setState({ showScrollTop: true, scrollY: window.scrollY });
+      ? this.setState({ showScrollTop: true, scrollY: window.scrollY })
+      : this.setState({ showScrollTop: false, scrollY: window.scrollY });
   };
 
   scrollToElement = element => {
