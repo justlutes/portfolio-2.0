@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const InnerSection = ({ author, quote, contents }) => {
+import ProfileImage from "../atoms/ProfileImage";
+
+const InnerSection = ({ alt, author, image, quote, contents }) => {
   return (
     <Container>
       <LeftColumn>
@@ -13,6 +15,7 @@ const InnerSection = ({ author, quote, contents }) => {
           <Paragraph key={content}>{content}</Paragraph>
         ))}
       </LeftColumn>
+      <ProfileImage url={image} alt={alt} />
     </Container>
   );
 };
