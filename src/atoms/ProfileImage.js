@@ -1,10 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-const ProfileImage = ({ alt, url }) => {
+const ProfileImage = ({ alt, srcset, url }) => {
   return (
     <Image>
-      <img src={url} alt={alt} />
+      <img
+        sizes="(min-width: 30em) 28em 100vw"
+        srcSet={srcset}
+        src={url}
+        alt={alt}
+      />
       <HighlightFirst>
         <Highlight />
       </HighlightFirst>

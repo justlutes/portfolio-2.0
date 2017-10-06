@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import ProfileImage from "../atoms/ProfileImage";
 
-const InnerSection = ({ alt, author, image, quote, contents }) => {
+const InnerSection = ({ alt, author, image, srcset, quote, contents }) => {
   return (
     <Container>
       <LeftColumn>
@@ -15,7 +15,7 @@ const InnerSection = ({ alt, author, image, quote, contents }) => {
           <Paragraph key={content}>{content}</Paragraph>
         ))}
       </LeftColumn>
-      <ProfileImage url={image} alt={alt} />
+      <ProfileImage url={image} srcset={srcset} alt={alt} />
     </Container>
   );
 };
@@ -34,9 +34,11 @@ const Container = styled.div`
 const LeftColumn = styled.div`
   order: 2;
   width: 100%;
+  margin-top: calc(6rem + (8 - 6) * (100vw - 76.8rem)/ (110 - 76.8));
   @media all and (min-width: 50em) {
     order: 1;
     width: 45%;
+    margin-top: 0;
   }
 `;
 

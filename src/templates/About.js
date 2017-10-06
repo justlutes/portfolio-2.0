@@ -31,7 +31,8 @@ class About extends React.Component {
             author="Carl Sagan"
             contents={paragraphs}
             alt="Kyle Lutes Freelance Developer"
-            image="https://res.cloudinary.com/kyle-lutes/image/upload/c_limit,e_grayscale,w_450/v1507300835/slopes_a9aywp.jpg"
+            srcset="https://res.cloudinary.com/kyle-lutes/image/upload/f_auto,e_grayscale,w_350/v1507300835/slopes_a9aywp.jpg 375w, https://res.cloudinary.com/kyle-lutes/image/upload/f_auto,e_grayscale,w_450/v1507300835/slopes_a9aywp.jpg 1280w"
+            image="https://res.cloudinary.com/kyle-lutes/image/upload/f_auto,e_grayscale,w_350/v1507300835/slopes_a9aywp.jpg"
           />
         </Container>
       </CustomElement>
