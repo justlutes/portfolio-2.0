@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-const Project = () => {
+const Project = ({ language, name, url }) => {
   return (
     <Button>
-      <Image src="http://placeskull.com/170/170" />
+      <Image src={`http://identicon.org?t=${name}`} />
     </Button>
   );
 };

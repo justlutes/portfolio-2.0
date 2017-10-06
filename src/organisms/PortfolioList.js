@@ -4,15 +4,29 @@ import styled from "styled-components";
 import ProjectColumn from "../molecules/ProjectColumn";
 
 class PortfolioList extends React.Component {
+  constructor(props) {
+    super();
+
+    this.state = {
+      groups: []
+    };
+  }
+  componentDidMount() {
+    let groups = this.props.repos
+      .map((val, index) => {
+        return index % 2 === 0
+          ? this.props.repos.slice(index, index + 2)
+          : null;
+      })
+      .filter(item => item);
+    this.setState({ groups });
+  }
   render() {
     return (
       <Container>
-        <ProjectColumn />
-        <ProjectColumn />
-        <ProjectColumn />
-        <ProjectColumn />
-        <ProjectColumn />
-        <ProjectColumn />
+        {this.state.groups.map((group, index) => (
+          <ProjectColumn key={index} projects={group} />
+        ))}
       </Container>
     );
   }

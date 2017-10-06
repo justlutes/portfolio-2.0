@@ -3,11 +3,17 @@ import styled from "styled-components";
 
 import Project from "../atoms/Project";
 
-const ProjectColumn = () => {
+const ProjectColumn = ({ projects }) => {
   return (
     <Container>
-      <Project key="1" />
-      <Project key="2" />
+      {projects.map((project, index) => (
+        <Project
+          key={index}
+          url={project.url}
+          name={project.name}
+          language={project.primaryLanguage.name}
+        />
+      ))}
     </Container>
   );
 };

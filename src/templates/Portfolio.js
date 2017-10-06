@@ -1,12 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import { Element } from "react-scroll";
+import { graphql, gql } from "react-apollo";
 
 import SectionIntro from "../organisms/SectionIntro";
 import PortfolioList from "../organisms/PortfolioList";
 
 class Portfolio extends React.Component {
   render() {
+    if (this.props.data.loading) {
+      return <div />;
+    }
+
     return (
       <CustomElement name="portfolio">
         <Container>
@@ -16,7 +21,7 @@ class Portfolio extends React.Component {
             tagLine="A collection of projects I've had the priviledge to build over the years."
             topText="The"
           />
-          <PortfolioList />
+          <PortfolioList repos={this.props.data.user.repositories.nodes} />
         </Container>
       </CustomElement>
     );
@@ -35,4 +40,25 @@ const Container = styled.div`
   margin: 0 auto;
 `;
 
-export default Portfolio;
+const repositoryQuery = gql`
+  query repositoryQuery($login: String!) {
+    user(login: $login) {
+      repositories(first: 12, orderBy: { direction: DESC, field: UPDATED_AT }) {
+        nodes {
+          name
+          description
+          primaryLanguage {
+            name
+          }
+          url
+        }
+      }
+    }
+  }
+`;
+
+export default graphql(repositoryQuery, {
+  options: props => {
+    return { variables: { login: props.user } };
+  }
+})(Portfolio);

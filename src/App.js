@@ -12,7 +12,7 @@ class App extends React.Component {
       <Header key="header" />,
       <Navigation key="nav" />,
       <About key="about" />,
-      <Portfolio key="port" />,
+      <Portfolio key="port" user="klutes90" />,
       <Contact key="contact" />,
       <Footer key="footer" />
     ];
