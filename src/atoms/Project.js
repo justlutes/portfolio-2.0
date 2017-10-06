@@ -12,6 +12,7 @@ const Project = () => {
 const Image = styled.img`width: 100%;`;
 
 const Button = styled.button`
+  outline: 0;
   background: 0 0;
   border: 0;
   cursor: pointer;
