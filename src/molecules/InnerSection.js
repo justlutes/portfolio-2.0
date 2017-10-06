@@ -22,11 +22,12 @@ const InnerSection = ({ alt, author, image, quote, contents }) => {
 
 const Container = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   margin-top: calc(6rem + (8 - 6) * (100vw - 76.8rem)/ (110 - 76.8));
   @media all and (min-width: 50em) {
     margin-top: 8rem;
+    flex-direction: row;
   }
 `;
 
