@@ -21,7 +21,7 @@ class About extends React.Component {
           <SectionIntro
             bottomText="Kyle Lutes"
             sectionNumber="1"
-            tagLine="I Stand on The Sweet Spot where design & code intersect."
+            tagLine="I stand on the sweet spot where design and code intersect."
             topText="About"
           />
           <InnerSection

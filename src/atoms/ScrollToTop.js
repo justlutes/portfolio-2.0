@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { animateScroll } from "react-scroll";
-import logo from "../assets/logo.png";
+
+import Logo from "./Logo";
 
 const ScrollToTop = ({ visible }) => {
   return (
     <Container active={visible} onClick={() => animateScroll.scrollToTop()}>
-      <Img src={logo} alt="Logo" />
+      <Logo fill="bbb" height="30" width="35" />
     </Container>
   );
 };
@@ -34,14 +35,6 @@ const Container = styled.button`
     width: 65px;
     transform: ${props =>
       props.active === true ? "translateX(0)" : "translateX(-100%)"};
-  }
-`;
-
-const Img = styled.img`
-  opacity: 0.7;
-  transition: opacity 333ms ease-in-out;
-  &:hover {
-    opacity: 1;
   }
 `;
 

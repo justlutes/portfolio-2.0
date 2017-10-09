@@ -3,15 +3,14 @@ import styled from "styled-components";
 import { Element } from "react-scroll";
 
 import SocialIcon from "../molecules/SocialIcon";
-
-import logo from "../assets/logo.png";
+import Logo from "../atoms/Logo";
 
 const Header = ({ currentSection }) => {
   return (
     <Element name="welcome">
       <Wrapper>
         <LogoWrapper>
-          <img src={logo} alt="Logo" />
+          <Logo fill="444" height="75" width="88" />
         </LogoWrapper>
         <SubHeader>Freelance</SubHeader>
         <Title>Full Stack</Title>
@@ -93,10 +92,10 @@ const LogoWrapper = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   margin: 15px 0;
-  padding-left: 0;
+  padding-left: 3.5rem;
   @media all and (min-width: 50em) {
     margin: 25px 0;
-    padding-left: 9rem;
+    padding-left: 12rem;
   }
 `;
 
