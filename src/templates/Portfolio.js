@@ -43,7 +43,11 @@ const Container = styled.div`
 const repositoryQuery = gql`
   query repositoryQuery($login: String!) {
     user(login: $login) {
-      repositories(first: 12, orderBy: { direction: DESC, field: UPDATED_AT }) {
+      repositories(
+        first: 12
+        privacy: PUBLIC
+        orderBy: { direction: DESC, field: UPDATED_AT }
+      ) {
         nodes {
           name
           description

@@ -80,6 +80,7 @@ const Wrapper = styled.ul`
   display: none;
   @media all and (min-width: 50em) {
     display: block;
+    z-index: 1;
     position: fixed;
     top: 50vh;
     right: 0;
