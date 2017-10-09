@@ -28,8 +28,8 @@ class Navigation extends React.Component {
   handleScroll = () => {
     const { scrollY } = this.state;
     scrollY > window.scrollY
-      ? this.setState({ showScrollTop: false, scrollY: window.scrollY })
-      : this.setState({ showScrollTop: true, scrollY: window.scrollY });
+      ? this.setState({ showScrollTop: true, scrollY: window.scrollY })
+      : this.setState({ showScrollTop: false, scrollY: window.scrollY });
   };
 
   scrollToElement = element => {
@@ -80,6 +80,7 @@ const Wrapper = styled.ul`
   display: none;
   @media all and (min-width: 50em) {
     display: block;
+    z-index: 1;
     position: fixed;
     top: 50vh;
     right: 0;
