@@ -1,20 +1,27 @@
 import React from "react";
 import styled from "styled-components";
+import { Fade } from "react-reveal";
 
 const Sectionheader = ({ number, top, bottom }) => {
   return (
     <TitleContainer>
       <NumberContainer>
         <SectionNumber>
-          <NumberPart>0</NumberPart>
-          <NumberPart>{number}</NumberPart>
-          <NumberPart>.</NumberPart>
+          <Fade up>
+            <NumberPart>0</NumberPart>
+            <NumberPart>{number}</NumberPart>
+            <NumberPart>.</NumberPart>
+          </Fade>
         </SectionNumber>
         <NumberLine />
       </NumberContainer>
       <SectionTitle>
-        <Title>{top}</Title>
-        <Title>{bottom}</Title>
+        <Fade up delay={500}>
+          <Title>{top}</Title>
+        </Fade>
+        <Fade up delay={600}>
+          <Title>{bottom}</Title>
+        </Fade>
       </SectionTitle>
     </TitleContainer>
   );
@@ -39,10 +46,7 @@ const SectionTitle = styled.div`
   text-transform: uppercase;
 `;
 
-const Title = styled.span`
-  display: inline-block;
-  transform: matrix(1, 0, 0, 1, 0, 0);
-`;
+const Title = styled.span`display: inline-block;`;
 
 const NumberContainer = styled.div`
   display: flex;
@@ -65,13 +69,9 @@ const SectionNumber = styled.span`
   }
 `;
 
-const NumberPart = styled.span`
-  display: inline-block;
-  transform: matrix(1, 0, 0, 1, 0, 0);
-`;
+const NumberPart = styled.span`display: inline-block;`;
 
 const NumberLine = styled.span`
-  transform: matrix(1, 0, 0, 1, 0, 0);
   height: calc(0.5rem + (1 - 0.5) * (100vw - 32rem)/ (76.8 - 32));
   background-color: #444;
   display: inline-block;

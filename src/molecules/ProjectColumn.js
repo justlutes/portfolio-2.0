@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Fade } from "react-reveal";
 
 import Project from "../atoms/Project";
 
@@ -7,12 +8,14 @@ const ProjectColumn = ({ projects }) => {
   return (
     <Container>
       {projects.map((project, index) => (
-        <Project
-          key={index}
-          url={project.url}
-          name={project.name}
-          language={project.primaryLanguage.name}
-        />
+        <Fade up delay={Math.floor(Math.random() * 1000 + 1)}>
+          <Project
+            key={index}
+            url={project.url}
+            name={project.name}
+            language={project.primaryLanguage.name}
+          />
+        </Fade>
       ))}
     </Container>
   );
