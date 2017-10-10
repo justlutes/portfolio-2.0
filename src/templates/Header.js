@@ -65,7 +65,7 @@ const IconWrapper = styled.div`
 const Title = styled.p`
   font-weight: 900;
   color: #888;
-  font-size: 12rem;
+  font-size: calc(4rem + (8 - 4) * (100vw - 32rem)/ (76.8 - 32));
   text-transform: uppercase;
   padding-left: 3.5rem;
   margin: 0;
@@ -76,15 +76,14 @@ const Title = styled.p`
 `;
 
 const SubTitle = Title.extend`
-  font-size: 25px;
-  margin-top: 10px;
   font-weight: bold;
+  font-size: calc(1.4rem + (2 - 1.4) * (100vw - 32rem)/ (76.8 - 32));
+  margin-top: 10px;
   color: #444;
 `;
 
 const SubHeader = Title.extend`
-  font-weight: bold;
-  font-size: 40px;
+  font-size: calc(1.8rem + (3 - 1.8) * (100vw - 32rem)/ (76.8 - 32));
 `;
 
 const LogoWrapper = styled.div`

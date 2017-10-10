@@ -51,11 +51,8 @@ const Title = styled.span`display: inline-block;`;
 const NumberContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding-right: 3rem;
+  margin-right: calc(2rem + (2.5 - 2) * (100vw - 32rem)/ (76.8 - 32));
   overflow: hidden;
-  @media all and (min-width: 50em) {
-    padding-right: calc(2rem + (2.5 - 2) * (100vw - 32rem)/ (76.8 - 32));
-  }
 `;
 
 const SectionNumber = styled.span`

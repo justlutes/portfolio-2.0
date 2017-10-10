@@ -49,10 +49,10 @@ const Paragraph = styled.p`
   flex-direction: column;
 `;
 
-const Bold = styled.span`font-weight: 700;`;
+const Bold = styled.span`font-weight: bold;`;
 
 const Author = styled.span`
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
 `;
 

@@ -43,13 +43,16 @@ class About extends React.Component {
 const CustomElement = styled(Element)`
   background-color: #1c1c1c;
   border-top: 0.1rem solid #333;
-  padding-bottom: calc(10rem + (15 - 10) * (100vw - 76.8rem)/ (110 - 76.8));
-  padding-top: calc(10rem + (15 - 10) * (100vw - 76.8rem)/ (110 - 76.8));
+  padding-bottom: calc(6rem + (10 - 6) * (100vw - 32rem)/ (76.8 - 32));
+  padding-top: calc(6rem + (10 - 6) * (100vw - 32rem)/ (76.8 - 32));
 `;
 
 const Container = styled.div`
-  padding: 0 5rem;
+  padding: 0 2.5rem;
   margin: 0 auto;
+  @media all and (min-width: 50em) {
+    padding: 0 5rem;
+  }
 `;
 
 export default About;

@@ -11,7 +11,6 @@ const Wrapper = styled.div`
   line-height: 1.3;
   text-align: right;
   margin-top: calc(4rem + (6 - 4) * (100vw - 32rem)/ (76.8 - 32));
-  margin-left: 15%;
 `;
 
 export default SectionTagLine;

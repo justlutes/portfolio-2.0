@@ -36,8 +36,11 @@ const CustomElement = styled(Element)`
 `;
 
 const Container = styled.div`
-  padding: 0 5rem;
+  padding: 0 2.5rem;
   margin: 0 auto;
+  @media all and (min-width: 50em) {
+    padding: 0 5rem;
+  }
 `;
 
 const repositoryQuery = gql`
