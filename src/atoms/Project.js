@@ -24,7 +24,7 @@ const Name = styled.span`
   font-size: 1.2rem;
   color: #bbb;
   white-space: nowrap;
-  max-width: 160px;
+  max-width: 120px;
   overflow: hidden;
   text-overflow: ellipsis;
 `;
@@ -50,6 +50,9 @@ const Button = styled.button`
   overflow: hidden;
   position: relative;
   transition: background-color 444ms, opacity 444ms;
+  @media all and (max-width: 50em) {
+    max-width: 130px;
+  }
   @media all and (min-width: 50em) {
     padding: 1.5rem;
   }

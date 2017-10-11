@@ -8,7 +8,11 @@ const ProjectColumn = ({ projects }) => {
   return (
     <Container>
       {projects.map((project, index) => (
-        <Fade up delay={Math.floor(Math.random() * 1000 + 1)}>
+        <Fade
+          up
+          delay={Math.floor(Math.random() * 1000 + 1)}
+          key={project.name}
+        >
           <Project
             key={index}
             url={project.url}
