@@ -6,9 +6,8 @@ import SectionIntro from "../organisms/SectionIntro";
 import InnerSection from "../molecules/InnerSection";
 
 const paragraphs = [
-  "I'm a creative developer with a passion for all things visual and technical. I build interactive web experiences that bring brands to life and add depth to their stories. I’ve used my design and development skills to create award-winning digital experiences for some of the world's most respected agencies and brands.",
+  "I'm a creative developer with a passion for all things visual and technical. I build interactive web experiences that help bring brands to life and add depth to their stories.",
   "My mission is to revolutionize the way brands are experienced by making online interactions meaningful and memorable. I use cutting edge web technology combined with pleasing and purposeful visuals to tell stories and invoke a feeling of connectedness.",
-  "I selectively work with brands who are passionate about their vision and ambitious about their impact.",
   "I look forward to sharing my creativity and dedication to quality.",
   "Let’s build something great together."
 ];
