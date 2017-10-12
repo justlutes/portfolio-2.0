@@ -3,14 +3,14 @@ import styled from "styled-components";
 import { Element } from "react-scroll";
 
 import SocialIcon from "../molecules/SocialIcon";
-import Logo from "../atoms/Logo";
+import AnimatedLogo from "../atoms/AnimatedLogo";
 
 const Header = ({ currentSection }) => {
   return (
     <Element name="welcome">
       <Wrapper>
         <LogoWrapper>
-          <Logo fill="444" height="75" width="88" />
+          <AnimatedLogo height="75" width="88" />
         </LogoWrapper>
         <SubHeader>Freelance</SubHeader>
         <Title>Full Stack</Title>
